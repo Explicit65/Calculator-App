@@ -51,7 +51,7 @@ fun NativeAndroidCalculator() {
         verticalArrangement = Arrangement.Bottom
     ) {
         Row (modifier = Modifier
-            .weight(1f)
+            .padding(bottom = 16.dp)
             .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             CalculatorButton(text = stringResource(R.string.C), textColor = Color.Red)
@@ -60,7 +60,7 @@ fun NativeAndroidCalculator() {
             CalculatorButton(text = stringResource(R.string.division), textColor = DarkGreen)
         }
         Row (modifier = Modifier
-            .weight(1f)
+            .padding(bottom = 16.dp)
             .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             CalculatorButton(text = stringResource(R.string.no_7))
@@ -69,7 +69,7 @@ fun NativeAndroidCalculator() {
             CalculatorButton(text = stringResource(R.string.no_x), textColor = DarkGreen)
         }
         Row (modifier = Modifier
-            .weight(1f)
+            .padding(bottom = 16.dp)
             .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             CalculatorButton(text = stringResource(R.string.no_4))
@@ -78,7 +78,7 @@ fun NativeAndroidCalculator() {
             CalculatorButton(text = stringResource(R.string.substraction), textColor = DarkGreen)
         }
         Row (modifier = Modifier
-            .weight(1f)
+            .padding(bottom = 16.dp)
             .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             CalculatorButton(text = stringResource(R.string.no_1))
@@ -87,7 +87,7 @@ fun NativeAndroidCalculator() {
             CalculatorButton(text = stringResource(R.string.addition), textColor = DarkGreen)
         }
         Row (modifier = Modifier
-            .weight(1f)
+            .padding(bottom = 16.dp)
             .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             CalculatorButton(text = stringResource(R.string.addition_substraction))
