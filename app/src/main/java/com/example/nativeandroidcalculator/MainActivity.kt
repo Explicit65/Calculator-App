@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.nativeandroidcalculator.ui.theme.NativeAndroidCalculatorTheme
@@ -102,7 +103,7 @@ fun NativeAndroidCalculator() {
 fun CalculatorButton (
                       text: String,
                       textColor: Color = Color.Black,
-                      buttonColor: Color = Color(0xFFD3D3D3)
+                      buttonColor: Color = Color(0xFFF0F0F0)
                     ) {
     Button(
         onClick = { /*TODO*/ },
@@ -118,10 +119,10 @@ fun CalculatorButton (
     }
 }
 
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    NativeAndroidCalculatorTheme {
-//        Greeting("Android")
-//    }
-//}
+@Preview(showBackground = true)
+@Composable
+fun NativeAndroidCalculatorPreview() {
+    NativeAndroidCalculatorTheme {
+        NativeAndroidCalculator()
+    }
+}
