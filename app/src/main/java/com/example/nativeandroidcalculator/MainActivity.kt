@@ -4,9 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -20,8 +22,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -51,6 +53,16 @@ fun NativeAndroidCalculator() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom
     ) {
+        Row (modifier = Modifier
+            .padding(bottom = 35.dp)
+            .fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+            IconButton(iconResId = R.drawable.clock_icon)
+            IconButton(iconResId = R.drawable.metric_icon)
+            IconButton(iconResId = R.drawable.orientation_icon)
+            Spacer(modifier = Modifier.weight(1f))
+            IconButton(iconResId = R.drawable.backspace_icon)
+        }
         Row (modifier = Modifier
             .padding(bottom = 16.dp)
             .fillMaxWidth(),
@@ -116,6 +128,14 @@ fun CalculatorButton (
             color = textColor
         )
     }
+}
+
+@Composable
+fun IconButton (
+    iconResId: Int = R.drawable.clock_icon,
+) {
+    Image(painter = painterResource(id = iconResId),
+        contentDescription = null )
 }
 
 @Preview(showBackground = true)
