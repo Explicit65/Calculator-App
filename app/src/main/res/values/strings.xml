@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Native Android Calculator</string>
+    <string name="C">C</string>
+    <string name="bracket_sign">( )</string>
+    <string name="percentage_sign">%</string>
+    <string name="division">/</string>
+    <string name="no_7">7</string>
+    <string name="no_8">8</string>
+    <string name="no_9">9</string>
+    <string name="no_x">x</string>
+    <string name="no_4">4</string>
+    <string name="no_5">5</string>
+    <string name="no_6">6</string>
+    <string name="substraction">-</string>
+    <string name="no_1">1</string>
+    <string name="no_2">2</string>
+    <string name="no_3">3</string>
+    <string name="addition">+</string>
+    <string name="addition_substraction">+/-</string>
+    <string name="no_0">0</string>
+    <string name="fullstop">.</string>
+    <string name="equal_to">=</string>
+</resources>
