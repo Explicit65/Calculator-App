@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Native Android Calculator</string>
     <string name="C">C</string>
-    <string name="bracket_sign">( )</string>
+    <string name="bracket_sign">()</string>
     <string name="percentage_sign">%</string>
     <string name="division">/</string>
     <string name="no_7">7</string>

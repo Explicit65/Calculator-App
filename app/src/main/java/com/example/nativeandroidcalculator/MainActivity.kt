@@ -44,6 +44,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun NativeAndroidCalculator() {
+    val DarkGreen = Color(0xFF006400)
     Column (
         modifier = Modifier.padding(40.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -53,10 +54,10 @@ fun NativeAndroidCalculator() {
             .weight(1f)
             .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-            CalculatorButton(text = stringResource(R.string.C))
-            CalculatorButton(text = stringResource(R.string.bracket_sign))
-            CalculatorButton(text = stringResource(R.string.percentage_sign))
-            CalculatorButton(text = stringResource(R.string.division))
+            CalculatorButton(text = stringResource(R.string.C), textColor = Color.Red)
+            CalculatorButton(text = stringResource(R.string.bracket_sign), textColor = DarkGreen)
+            CalculatorButton(text = stringResource(R.string.percentage_sign), textColor = DarkGreen)
+            CalculatorButton(text = stringResource(R.string.division), textColor = DarkGreen)
         }
         Row (modifier = Modifier
             .weight(1f)
@@ -65,7 +66,7 @@ fun NativeAndroidCalculator() {
             CalculatorButton(text = stringResource(R.string.no_7))
             CalculatorButton(text = stringResource(R.string.no_8))
             CalculatorButton(text = stringResource(R.string.no_9))
-            CalculatorButton(text = stringResource(R.string.no_x))
+            CalculatorButton(text = stringResource(R.string.no_x), textColor = DarkGreen)
         }
         Row (modifier = Modifier
             .weight(1f)
@@ -74,7 +75,7 @@ fun NativeAndroidCalculator() {
             CalculatorButton(text = stringResource(R.string.no_4))
             CalculatorButton(text = stringResource(R.string.no_5))
             CalculatorButton(text = stringResource(R.string.no_6))
-            CalculatorButton(text = stringResource(R.string.substraction))
+            CalculatorButton(text = stringResource(R.string.substraction), textColor = DarkGreen)
         }
         Row (modifier = Modifier
             .weight(1f)
@@ -83,7 +84,7 @@ fun NativeAndroidCalculator() {
             CalculatorButton(text = stringResource(R.string.no_1))
             CalculatorButton(text = stringResource(R.string.no_2))
             CalculatorButton(text = stringResource(R.string.no_3))
-            CalculatorButton(text = stringResource(R.string.addition))
+            CalculatorButton(text = stringResource(R.string.addition), textColor = DarkGreen)
         }
         Row (modifier = Modifier
             .weight(1f)
@@ -92,23 +93,26 @@ fun NativeAndroidCalculator() {
             CalculatorButton(text = stringResource(R.string.addition_substraction))
             CalculatorButton(text = stringResource(R.string.no_0))
             CalculatorButton(text = stringResource(R.string.fullstop))
-            CalculatorButton(text = stringResource(R.string.equal_to))
+            CalculatorButton(text = stringResource(R.string.equal_to), textColor = Color.White, buttonColor = DarkGreen)
         }
     }
 }
 
 @Composable
-fun CalculatorButton (text: String) {
-    val lighterGray = Color(0xFFD3D3D3)
+fun CalculatorButton (
+                      text: String,
+                      textColor: Color = Color.Black,
+                      buttonColor: Color = Color(0xFFD3D3D3)
+                    ) {
     Button(
         onClick = { /*TODO*/ },
         shape = CircleShape,
-        colors = ButtonDefaults.buttonColors(containerColor = lighterGray),
+        colors = ButtonDefaults.buttonColors(containerColor = buttonColor),
         modifier = Modifier.size(70.dp)
     ) {
         Text(text = text,
-            fontSize = 18.sp,
-            color = Color.Black,
+            fontSize = 24.sp,
+            color = textColor,
             fontWeight = FontWeight.Bold
         )
     }
