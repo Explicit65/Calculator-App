@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
 fun NativeAndroidCalculator() {
     val DarkGreen = Color(0xFF006400)
     Column (
-        modifier = Modifier.padding(40.dp),
+        modifier = Modifier.padding(30.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Bottom
     ) {
@@ -109,12 +109,11 @@ fun CalculatorButton (
         onClick = { /*TODO*/ },
         shape = CircleShape,
         colors = ButtonDefaults.buttonColors(containerColor = buttonColor),
-        modifier = Modifier.size(70.dp)
+        modifier = Modifier.size(75.dp)
     ) {
         Text(text = text,
             fontSize = 24.sp,
-            color = textColor,
-            fontWeight = FontWeight.Bold
+            color = textColor
         )
     }
 }
